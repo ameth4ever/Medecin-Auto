@@ -1,0 +1,191 @@
+import { defineType, defineField } from 'sanity'
+
+export const vehicle = defineType({
+  name: 'vehicle',
+  title: 'Véhicules',
+  type: 'document',
+  groups: [
+    { name: 'details', title: 'Détails' },
+    { name: 'pricing', title: 'Prix' },
+    { name: 'media', title: 'Médias' },
+    { name: 'seo', title: 'SEO' },
+  ],
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Titre',
+      type: 'string',
+      group: 'details',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      group: 'details',
+      options: { source: 'title', maxLength: 96 },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'brand',
+      title: 'Marque',
+      type: 'string',
+      group: 'details',
+    }),
+    defineField({
+      name: 'model',
+      title: 'Modèle',
+      type: 'string',
+      group: 'details',
+    }),
+    defineField({
+      name: 'year',
+      title: 'Année',
+      type: 'number',
+      group: 'details',
+    }),
+    defineField({
+      name: 'mileage',
+      title: 'Kilométrage',
+      type: 'number',
+      group: 'details',
+    }),
+    defineField({
+      name: 'transmission',
+      title: 'Transmission',
+      type: 'string',
+      group: 'details',
+      options: {
+        list: [
+          { title: 'Automatique', value: 'automatic' },
+          { title: 'Manuelle', value: 'manual' },
+        ],
+      },
+    }),
+    defineField({
+      name: 'fuelType',
+      title: 'Type de Carburant',
+      type: 'string',
+      group: 'details',
+      options: {
+        list: [
+          { title: 'Essence', value: 'essence' },
+          { title: 'Diesel', value: 'diesel' },
+          { title: 'Électrique', value: 'electrique' },
+          { title: 'Hybride', value: 'hybride' },
+        ],
+      },
+    }),
+    defineField({
+      name: 'condition',
+      title: 'État',
+      type: 'string',
+      group: 'details',
+      options: {
+        list: [
+          { title: 'Neuf', value: 'neuf' },
+          { title: 'Occasion', value: 'occasion' },
+          { title: 'Certifié', value: 'certifie' },
+        ],
+      },
+    }),
+    defineField({
+      name: 'status',
+      title: 'Statut',
+      type: 'string',
+      group: 'details',
+      options: {
+        list: [
+          { title: 'Disponible', value: 'disponible' },
+          { title: 'Vendu', value: 'vendu' },
+          { title: 'Réservé', value: 'reserve' },
+        ],
+      },
+    }),
+    defineField({
+      name: 'price',
+      title: 'Prix',
+      type: 'number',
+      group: 'pricing',
+    }),
+    defineField({
+      name: 'currency',
+      title: 'Devise',
+      type: 'string',
+      group: 'pricing',
+      initialValue: 'FCFA',
+    }),
+    defineField({
+      name: 'isForSale',
+      title: 'À Vendre',
+      type: 'boolean',
+      group: 'pricing',
+      initialValue: true,
+    }),
+    defineField({
+      name: 'isForRent',
+      title: 'À Louer',
+      type: 'boolean',
+      group: 'pricing',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'dailyRate',
+      title: 'Tarif Journalier',
+      type: 'number',
+      group: 'pricing',
+    }),
+    defineField({
+      name: 'weeklyRate',
+      title: 'Tarif Hebdomadaire',
+      type: 'number',
+      group: 'pricing',
+    }),
+    defineField({
+      name: 'monthlyRate',
+      title: 'Tarif Mensuel',
+      type: 'number',
+      group: 'pricing',
+    }),
+    defineField({
+      name: 'shortDescription',
+      title: 'Description Courte',
+      type: 'text',
+      group: 'details',
+      rows: 3,
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description Complète',
+      type: 'blockContent',
+      group: 'details',
+    }),
+    defineField({
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      group: 'media',
+      of: [{ type: 'image', options: { hotspot: true } }],
+    }),
+    defineField({
+      name: 'features',
+      title: 'Équipements',
+      type: 'array',
+      group: 'details',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'isFeatured',
+      title: 'Mis en Avant',
+      type: 'boolean',
+      group: 'details',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+      group: 'seo',
+    }),
+  ],
+})

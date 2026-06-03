@@ -1,0 +1,1297 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titre du Site"
+      },
+      {
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "logo",
+        "type": "image"
+      },
+      {
+        "name": "favicon",
+        "type": "image"
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "title": "Téléphone (Mobile)"
+      },
+      {
+        "name": "phoneSecondary",
+        "type": "string",
+        "title": "Téléphone (Fixe)"
+      },
+      {
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "title": "Adresse"
+      },
+      {
+        "name": "city",
+        "type": "string",
+        "title": "Ville"
+      },
+      {
+        "initialValue": "Sénégal",
+        "name": "country",
+        "type": "string",
+        "title": "Pays"
+      },
+      {
+        "fields": [
+          {
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "name": "facebook",
+            "type": "url"
+          },
+          {
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "name": "instagram",
+            "type": "url"
+          },
+          {
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "name": "whatsapp",
+            "type": "url",
+            "title": "WhatsApp"
+          },
+          {
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "name": "youtube",
+            "type": "url",
+            "title": "YouTube"
+          },
+          {
+            "validation": [
+              {
+                "level": "error",
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "name": "linkedin",
+            "type": "url",
+            "title": "LinkedIn"
+          }
+        ],
+        "name": "socialLinks",
+        "type": "object",
+        "title": "Réseaux Sociaux"
+      },
+      {
+        "fields": [
+          {
+            "name": "weekdays",
+            "type": "string",
+            "title": "Lundi - Vendredi"
+          },
+          {
+            "name": "saturday",
+            "type": "string",
+            "title": "Samedi"
+          },
+          {
+            "name": "sunday",
+            "type": "string",
+            "title": "Dimanche"
+          }
+        ],
+        "name": "workingHours",
+        "type": "object",
+        "title": "Horaires d'Ouverture"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document",
+    "title": "Paramètres du Site"
+  },
+  {
+    "fields": [
+      {
+        "fields": [
+          {
+            "name": "title",
+            "type": "string",
+            "title": "Titre"
+          },
+          {
+            "name": "subtitle",
+            "type": "string",
+            "title": "Sous-titre"
+          },
+          {
+            "fields": [
+              {
+                "name": "label",
+                "type": "string",
+                "title": "Libellé"
+              },
+              {
+                "name": "link",
+                "type": "string",
+                "title": "Lien"
+              }
+            ],
+            "name": "ctaPrimary",
+            "type": "object",
+            "title": "CTA Principal"
+          },
+          {
+            "fields": [
+              {
+                "name": "label",
+                "type": "string",
+                "title": "Libellé"
+              },
+              {
+                "name": "link",
+                "type": "string",
+                "title": "Lien"
+              }
+            ],
+            "name": "ctaSecondary",
+            "type": "object",
+            "title": "CTA Secondaire"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "name": "backgroundImage",
+            "type": "image",
+            "title": "Image de Fond"
+          },
+          {
+            "of": [
+              {
+                "type": "string"
+              }
+            ],
+            "name": "badges",
+            "type": "array",
+            "title": "Badges de Confiance"
+          }
+        ],
+        "name": "hero",
+        "type": "object",
+        "title": "Section Hero"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "service"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to services"
+          }
+        ],
+        "name": "featuredServices",
+        "type": "array",
+        "title": "Services à la Une"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "vehicle"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to véhicules"
+          }
+        ],
+        "name": "featuredVehicles",
+        "type": "array",
+        "title": "Véhicules à la Une"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "rental"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to locations"
+          }
+        ],
+        "name": "featuredRentals",
+        "type": "array",
+        "title": "Locations à la Une"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO"
+      }
+    ],
+    "name": "homepage",
+    "type": "document",
+    "title": "Page d'Accueil"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titre"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image"
+      },
+      {
+        "rows": 3,
+        "name": "shortDescription",
+        "type": "text",
+        "title": "Description Courte"
+      },
+      {
+        "name": "description",
+        "type": "blockContent",
+        "title": "Description Complète"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "icon",
+                "type": "string",
+                "title": "Icône"
+              },
+              {
+                "name": "label",
+                "type": "string",
+                "title": "Libellé"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "features",
+        "type": "array",
+        "title": "Caractéristiques"
+      },
+      {
+        "initialValue": false,
+        "name": "isFeatured",
+        "type": "boolean",
+        "title": "Mis en Avant"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Ordre d'Affichage"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO"
+      }
+    ],
+    "name": "service",
+    "type": "document",
+    "title": "Services"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titre"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "name": "brand",
+        "type": "string",
+        "title": "Marque"
+      },
+      {
+        "name": "model",
+        "type": "string",
+        "title": "Modèle"
+      },
+      {
+        "name": "year",
+        "type": "number",
+        "title": "Année"
+      },
+      {
+        "name": "mileage",
+        "type": "number",
+        "title": "Kilométrage"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Automatique",
+              "value": "automatic"
+            },
+            {
+              "title": "Manuelle",
+              "value": "manual"
+            }
+          ]
+        },
+        "name": "transmission",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Essence",
+              "value": "essence"
+            },
+            {
+              "title": "Diesel",
+              "value": "diesel"
+            },
+            {
+              "title": "Électrique",
+              "value": "electrique"
+            },
+            {
+              "title": "Hybride",
+              "value": "hybride"
+            }
+          ]
+        },
+        "name": "fuelType",
+        "type": "string",
+        "title": "Type de Carburant"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Neuf",
+              "value": "neuf"
+            },
+            {
+              "title": "Occasion",
+              "value": "occasion"
+            },
+            {
+              "title": "Certifié",
+              "value": "certifie"
+            }
+          ]
+        },
+        "name": "condition",
+        "type": "string",
+        "title": "État"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Disponible",
+              "value": "disponible"
+            },
+            {
+              "title": "Vendu",
+              "value": "vendu"
+            },
+            {
+              "title": "Réservé",
+              "value": "reserve"
+            }
+          ]
+        },
+        "name": "status",
+        "type": "string",
+        "title": "Statut"
+      },
+      {
+        "name": "price",
+        "type": "number",
+        "title": "Prix"
+      },
+      {
+        "initialValue": "FCFA",
+        "name": "currency",
+        "type": "string",
+        "title": "Devise"
+      },
+      {
+        "initialValue": true,
+        "name": "isForSale",
+        "type": "boolean",
+        "title": "À Vendre"
+      },
+      {
+        "initialValue": false,
+        "name": "isForRent",
+        "type": "boolean",
+        "title": "À Louer"
+      },
+      {
+        "name": "dailyRate",
+        "type": "number",
+        "title": "Tarif Journalier"
+      },
+      {
+        "name": "weeklyRate",
+        "type": "number",
+        "title": "Tarif Hebdomadaire"
+      },
+      {
+        "name": "monthlyRate",
+        "type": "number",
+        "title": "Tarif Mensuel"
+      },
+      {
+        "rows": 3,
+        "name": "shortDescription",
+        "type": "text",
+        "title": "Description Courte"
+      },
+      {
+        "name": "description",
+        "type": "blockContent",
+        "title": "Description Complète"
+      },
+      {
+        "of": [
+          {
+            "options": {
+              "hotspot": true
+            },
+            "type": "image"
+          }
+        ],
+        "name": "images",
+        "type": "array"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "features",
+        "type": "array",
+        "title": "Équipements"
+      },
+      {
+        "initialValue": false,
+        "name": "isFeatured",
+        "type": "boolean",
+        "title": "Mis en Avant"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO"
+      }
+    ],
+    "name": "vehicle",
+    "type": "document",
+    "title": "Véhicules"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titre"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "to": [
+          {
+            "type": "vehicle"
+          }
+        ],
+        "name": "vehicle",
+        "type": "reference",
+        "title": "Véhicule"
+      },
+      {
+        "name": "dailyRate",
+        "type": "number",
+        "title": "Tarif Journalier"
+      },
+      {
+        "name": "weeklyRate",
+        "type": "number",
+        "title": "Tarif Hebdomadaire"
+      },
+      {
+        "name": "monthlyRate",
+        "type": "number",
+        "title": "Tarif Mensuel"
+      },
+      {
+        "name": "deposit",
+        "type": "number",
+        "title": "Caution"
+      },
+      {
+        "name": "mileageLimit",
+        "type": "number",
+        "title": "Limite Kilométrique"
+      },
+      {
+        "name": "insurance",
+        "type": "string",
+        "title": "Assurance"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Disponible",
+              "value": "disponible"
+            },
+            {
+              "title": "Loué",
+              "value": "loue"
+            },
+            {
+              "title": "En Maintenance",
+              "value": "maintenance"
+            }
+          ]
+        },
+        "name": "availability",
+        "type": "string",
+        "title": "Disponibilité"
+      },
+      {
+        "of": [
+          {
+            "options": {
+              "hotspot": true
+            },
+            "type": "image"
+          }
+        ],
+        "name": "images",
+        "type": "array"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "features",
+        "type": "array",
+        "title": "Équipements Inclus"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "conditions",
+        "type": "array",
+        "title": "Conditions de Location"
+      },
+      {
+        "initialValue": false,
+        "name": "isFeatured",
+        "type": "boolean",
+        "title": "Mis en Avant"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO"
+      }
+    ],
+    "name": "rental",
+    "type": "document",
+    "title": "Locations"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titre"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "rows": 3,
+        "name": "excerpt",
+        "type": "text",
+        "title": "Extrait"
+      },
+      {
+        "name": "content",
+        "type": "blockContent",
+        "title": "Contenu"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "coverImage",
+        "type": "image",
+        "title": "Image de Couverture"
+      },
+      {
+        "name": "author",
+        "type": "string",
+        "title": "Auteur"
+      },
+      {
+        "to": [
+          {
+            "type": "blogCategory"
+          }
+        ],
+        "name": "category",
+        "type": "reference",
+        "title": "Catégorie"
+      },
+      {
+        "name": "publishedAt",
+        "type": "datetime",
+        "title": "Date de Publication"
+      },
+      {
+        "name": "readingTime",
+        "type": "number",
+        "title": "Temps de Lecture (minutes)"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tags",
+        "type": "array"
+      },
+      {
+        "initialValue": false,
+        "name": "isFeatured",
+        "type": "boolean",
+        "title": "Mis en Avant"
+      },
+      {
+        "name": "seo",
+        "type": "seo",
+        "title": "SEO"
+      }
+    ],
+    "name": "blogPost",
+    "type": "document",
+    "title": "Articles de Blog"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titre"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      }
+    ],
+    "name": "blogCategory",
+    "type": "document",
+    "title": "Catégories de Blog"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Nom"
+      },
+      {
+        "name": "role",
+        "type": "string",
+        "title": "Rôle"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "avatar",
+        "type": "image",
+        "title": "Photo"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "content",
+        "type": "text",
+        "title": "Témoignage"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 5
+              }
+            ]
+          }
+        ],
+        "name": "rating",
+        "type": "number",
+        "title": "Note"
+      },
+      {
+        "initialValue": false,
+        "name": "isFeatured",
+        "type": "boolean",
+        "title": "Mis en Avant"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Ordre d'Affichage"
+      }
+    ],
+    "name": "testimonial",
+    "type": "document",
+    "title": "Témoignages"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "question",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "answer",
+        "type": "text",
+        "title": "Réponse"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Général",
+              "value": "general"
+            },
+            {
+              "title": "Réparation",
+              "value": "reparation"
+            },
+            {
+              "title": "Location",
+              "value": "location"
+            },
+            {
+              "title": "Vente",
+              "value": "vente"
+            }
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "Catégorie"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Ordre d'Affichage"
+      },
+      {
+        "initialValue": false,
+        "name": "isFeatured",
+        "type": "boolean",
+        "title": "Mis en Avant"
+      }
+    ],
+    "name": "faq",
+    "type": "document",
+    "title": "FAQ"
+  },
+  {
+    "fields": [
+      {
+        "description": "Titre pour les moteurs de recherche (60 caractères max)",
+        "name": "title",
+        "type": "string",
+        "title": "Titre SEO"
+      },
+      {
+        "rows": 3,
+        "description": "Meta description (160 caractères max)",
+        "name": "description",
+        "type": "text",
+        "title": "Description SEO"
+      },
+      {
+        "description": "Mots-clés séparés par des virgules",
+        "name": "keywords",
+        "type": "string",
+        "title": "Mots-clés"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Image pour le partage sur les réseaux sociaux (1200x630px)",
+        "name": "ogImage",
+        "type": "image",
+        "title": "Image Open Graph"
+      },
+      {
+        "initialValue": false,
+        "description": "Empêcher l'indexation de cette page",
+        "name": "noIndex",
+        "type": "boolean"
+      }
+    ],
+    "name": "seo",
+    "type": "object",
+    "title": "SEO"
+  },
+  {
+    "of": [
+      {
+        "lists": [
+          {
+            "value": "bullet",
+            "title": "Bullet"
+          },
+          {
+            "value": "number",
+            "title": "Numbered"
+          }
+        ],
+        "marks": {
+          "annotations": [
+            {
+              "fields": [
+                {
+                  "validation": [
+                    {
+                      "level": "error",
+                      "rules": [
+                        {
+                          "flag": "uri",
+                          "constraint": {
+                            "options": {
+                              "scheme": [
+                                "/^http$/",
+                                "/^https$/"
+                              ],
+                              "allowRelative": false,
+                              "relativeOnly": false,
+                              "allowCredentials": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "name": "href",
+                  "type": "url",
+                  "title": "URL"
+                }
+              ],
+              "name": "link",
+              "type": "object",
+              "title": "URL"
+            }
+          ],
+          "decorators": [
+            {
+              "value": "strong",
+              "title": "Bold"
+            },
+            {
+              "value": "em",
+              "title": "Italic"
+            }
+          ]
+        },
+        "of": [],
+        "styles": [
+          {
+            "value": "normal",
+            "title": "Normal"
+          },
+          {
+            "value": "h2",
+            "title": "H2"
+          },
+          {
+            "value": "h3",
+            "title": "H3"
+          },
+          {
+            "value": "h4",
+            "title": "H4"
+          },
+          {
+            "value": "blockquote",
+            "title": "Quote"
+          }
+        ],
+        "type": "block"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Texte Alternatif"
+          },
+          {
+            "name": "caption",
+            "type": "string",
+            "title": "Légende"
+          }
+        ],
+        "type": "image"
+      }
+    ],
+    "name": "blockContent",
+    "type": "array",
+    "title": "Contenu"
+  }
+]
