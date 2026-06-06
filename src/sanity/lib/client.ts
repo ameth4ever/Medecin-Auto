@@ -9,5 +9,5 @@ export const client = createClient({
     enabled: process.env.NODE_ENV === 'development',
     studioUrl: '/studio',
   },
-  useCdn: process.env.NODE_ENV === 'production',
+  useCdn: false,
 })
