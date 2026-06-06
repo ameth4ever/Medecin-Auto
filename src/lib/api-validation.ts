@@ -54,7 +54,7 @@ export function checkOrigin(request: Request): boolean {
 
   if (!allowed) return true
 
-  return allowed.includes(host || '') || allowed.includes('medecinauto.sn') || allowed.includes('localhost')
+  return allowed.includes(host || '') || allowed.includes('medecinauto.com') || allowed.includes('medecinauto.sn') || allowed.includes('localhost')
 }
 
 export function errorResponse(message: string, status: number = 400) {

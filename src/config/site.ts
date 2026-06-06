@@ -4,7 +4,7 @@ export const siteConfig = {
     "We take care of your vehicle like a doctor cares for their patients.",
   description:
     "Premium Platform for Automotive Services and Mobility in Senegal. Repair, rental, and vehicle sales.",
-  url: "https://medecinauto.sn",
+  url: "https://medecinauto.com",
   locale: "fr_SN",
   defaultSeo: {
     title:
