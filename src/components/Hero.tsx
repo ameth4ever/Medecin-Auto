@@ -362,7 +362,7 @@ export function Hero({ hero }: HeroProps) {
                 { value: '50+', label: t('statsServices') },
                 { value: '500+', label: t('statsClients') },
                 { value: '200+', label: t('statsVehicules') },
-                { value: '10+', label: t('statsAnnees') },
+                { value: '5+', label: t('statsAnnees') },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}

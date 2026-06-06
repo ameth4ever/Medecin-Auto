@@ -176,7 +176,7 @@ export function HomeContent({
     { icon: Cog, value: '50+', label: t('statsServices') },
     { icon: Car, value: '200+', label: t('statsVehicules') },
     { icon: Star, value: '500+', label: t('statsClients') },
-    { icon: Award, value: '10+', label: t('statsAnnees') },
+    { icon: Award, value: '5+', label: t('statsAnnees') },
   ]
 
   const expertisePoints = [
@@ -275,7 +275,7 @@ export function HomeContent({
                 animate={{ x: ['0%', '-50%'] }}
                 transition={{
                   ease: 'linear',
-                  duration: 30,
+                  duration: 12,
                   repeat: Infinity,
                 }}
               >
@@ -708,8 +708,8 @@ export function HomeContent({
             >
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '10+', label: t('anneesExpertise') },
-                  { value: '5000+', label: t('vehiculesRepares') },
+                  { value: '5+', label: t('anneesExpertise') },
+                  { value: '1 000+', label: t('vehiculesRepares') },
                   { value: '98%', label: t('statsClients') },
                   { value: '24/7', label: t('assistanceDisponible') },
                 ].map((stat, i) => (
@@ -807,7 +807,7 @@ export function HomeContent({
                 icon: Cog,
                 title: t('innovation'),
                 description: t('innovationDesc'),
-                stat: '15 000+',
+                stat: '500+',
                 statLabel: t('heuresFormation'),
               },
               {

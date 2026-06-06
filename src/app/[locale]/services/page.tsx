@@ -28,10 +28,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   const services = await client.fetch<Service[]>(servicesQuery).catch(() => [])
 
   const stats = [
-    { icon: Wrench, value: '15 000+', label: t('statInterventions') },
-    { icon: Car, value: '8 000+', label: t('statVehicules') },
+    { icon: Wrench, value: '5 000+', label: t('statInterventions') },
+    { icon: Car, value: '1 000+', label: t('statVehicules') },
     { icon: Shield, value: '6 mois', label: t('statGarantie') },
-    { icon: Gauge, value: '10+', label: t('statExpertise') },
+    { icon: Gauge, value: '5+', label: t('statExpertise') },
   ]
 
   const steps = [

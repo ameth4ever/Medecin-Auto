@@ -125,7 +125,7 @@
   },
   "about": {
     "metaTitle": "About — MÉDECIN AUTO",
-    "metaDesc": "Discover MÉDECIN AUTO, your premium platform for automotive services and mobility in Senegal. Expertise, transparency, and passion.",
+    "metaDesc": "Discover MÉDECIN AUTO, your premium platform for automotive services and mobility in Senegal. Expertise, transparency, and passion since 2021.",
     "atelierPremium": "Premium Auto Workshop",
     "heroTitle": "Your Vehicle Deserves a Real Mechanic",
     "heroDesc": "A workshop equipped with cutting-edge technology, a team of expert mechanics, and a quality standard that makes MÉDECIN AUTO the reference for automotive repair in Senegal.",
@@ -133,7 +133,7 @@
     "prendreRdv": "Book an Appointment",
     "notreAtelier": "Our Workshop",
     "garageModerne": "A Modern, Well-Equipped Garage",
-    "atelierDesc": "6 vehicle lifts, next-generation diagnostic tools, and a team of passionate mechanics to take care of your vehicle.",
+    "atelierDesc": "8 vehicle lifts, next-generation diagnostic tools, and a team of passionate mechanics to take care of your vehicle.",
     "pontsElevateurs": "Vehicle Lifts",
     "pontsValue": "8 workstations",
     "diagnostic": "Diagnostics",
@@ -278,7 +278,7 @@
     "whyGarantieDesc": "All our services are guaranteed parts and labor. Your satisfaction is our top priority.",
     "whyPretTitle": "Courtesy Vehicle",
     "whyPretDesc": "A loaner vehicle provided so you can go about your business during repairs.",
-    "overlayClients": "Over 8,000 satisfied customers",
+    "overlayClients": "Over 2,000 satisfied customers",
     "overlayCommunaute": "Join our community",
     "enSavoirPlus": "Learn more",
     "serviceDiagnosticGeneral": "General Diagnostics",
@@ -553,7 +553,8 @@
     "facebookLabel": "Facebook",
     "instagramLabel": "Instagram",
     "whatsappLabel": "WhatsApp",
-    "youtubeLabel": "YouTube"
+    "youtubeLabel": "YouTube",
+    "tiktokLabel": "TikTok"
   },
   "form": {
     "messageEnvoye": "Message sent!",

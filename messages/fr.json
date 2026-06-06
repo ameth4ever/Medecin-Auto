@@ -125,7 +125,7 @@
   },
   "about": {
     "metaTitle": "À Propos — MÉDECIN AUTO",
-    "metaDesc": "Découvrez MÉDECIN AUTO, votre plateforme premium de services et mobilité automobile au Sénégal. Expertise, transparence et passion depuis plus de 10 ans.",
+    "metaDesc": "Découvrez MÉDECIN AUTO, votre plateforme premium de services et mobilité automobile au Sénégal. Expertise, transparence et passion depuis 2021.",
     "atelierPremium": "Atelier Mécanique Premium",
     "heroTitle": "Votre Véhicule Mérite un Vrai Mécanicien",
     "heroDesc": "Un atelier équipé de technologies dernier cri, une équipe de mécaniciens experts et une exigence de qualité qui fait de MÉDECIN AUTO la référence de la réparation automobile au Sénégal.",
@@ -133,7 +133,7 @@
     "prendreRdv": "Prendre rendez-vous",
     "notreAtelier": "Notre atelier",
     "garageModerne": "Un Garage Moderne & Équipé",
-    "atelierDesc": "6 ponts élévateurs, des outils de diagnostic dernière génération et une équipe de mécaniciens passionnés pour prendre soin de votre véhicule.",
+    "atelierDesc": "8 ponts élévateurs, des outils de diagnostic dernière génération et une équipe de mécaniciens passionnés pour prendre soin de votre véhicule.",
     "pontsElevateurs": "Ponts élévateurs",
     "pontsValue": "8 postes de travail",
     "diagnostic": "Diagnostic",
@@ -278,7 +278,7 @@
     "whyGarantieDesc": "Toutes nos prestations sont garanties pièces et main-d'œuvre. Votre satisfaction est notre priorité absolue.",
     "whyPretTitle": "Véhicule de Prêt",
     "whyPretDesc": "Un véhicule de courtoisie mis à votre disposition pour que vous puissiez vaquer à vos occupations pendant les réparations.",
-    "overlayClients": "Plus de 8 000 clients satisfaits",
+    "overlayClients": "Plus de 2 000 clients satisfaits",
     "overlayCommunaute": "Rejoignez notre communauté",
     "enSavoirPlus": "En savoir plus",
     "serviceDiagnosticGeneral": "Diagnostic Général",
@@ -553,7 +553,8 @@
     "facebookLabel": "Facebook",
     "instagramLabel": "Instagram",
     "whatsappLabel": "WhatsApp",
-    "youtubeLabel": "YouTube"
+    "youtubeLabel": "YouTube",
+    "tiktokLabel": "TikTok"
   },
   "form": {
     "messageEnvoye": "Message envoyé !",
