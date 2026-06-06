@@ -181,12 +181,12 @@ export function Footer() {
           <p className="text-xs text-argent/40">
             Conçu et développé par{' '}
             <a
-              href="https://jolofnexus.netlify.app/"
+              href="https://zenova2026.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-electric/70 hover:text-electric transition-colors"
             >
-              Jolof Nexus
+              Zenova
             </a>
           </p>
 
