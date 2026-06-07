@@ -49,7 +49,9 @@ export default async function VehicleDetailPage(props: { params: Promise<{ local
     reserve: 'bg-amber-500/15 text-amber-500',
   }
 
-  const images = vehicle.images?.map((img) => urlFor(img).width(1200).height(800).url()) || []
+  const images = (vehicle.images ?? []).filter(Boolean).flatMap((img) => {
+    try { return [urlFor(img).width(1200).height(800).url()] } catch { return [] }
+  })
 
   const whatsappUrl = siteConfig.social.whatsapp
 

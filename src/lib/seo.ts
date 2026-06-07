@@ -20,8 +20,10 @@ export function generatePageMetadata(
   const description = seo?.description || siteConfig.defaultSeo.description
 
   const ogImage = seo?.ogImage
-    ? urlFor(seo.ogImage).width(1200).height(630).url()
-    : `${siteConfig.url}/og-image.jpg`
+    ? (() => { try { return urlFor(seo.ogImage).width(1200).height(630).url() } catch { return null } })()
+    : null
+
+  const resolvedOgImage = ogImage ?? `${siteConfig.url}/og-image.jpg`
 
   return {
     title,
@@ -32,7 +34,7 @@ export function generatePageMetadata(
       description,
       url: overrides?.openGraph?.url || siteConfig.url,
       siteName: siteConfig.name,
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: resolvedOgImage, width: 1200, height: 630 }],
       locale: locale ? localeMap[locale] || siteConfig.locale : siteConfig.locale,
       type: 'website',
     },
@@ -40,7 +42,7 @@ export function generatePageMetadata(
       card: 'summary_large_image',
       title,
       description,
-      images: [ogImage],
+      images: [resolvedOgImage],
     },
     robots: seo?.noIndex
       ? { index: false, follow: false }

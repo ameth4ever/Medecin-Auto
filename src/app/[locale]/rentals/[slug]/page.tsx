@@ -52,7 +52,9 @@ export default async function RentalDetailPage(props: { params: Promise<{ locale
     maintenance: 'bg-red-500/15 text-red-500',
   }
 
-  const images = rental.images?.map((img) => urlFor(img).width(1200).height(800).url()) || []
+  const images = (rental.images ?? []).filter(Boolean).flatMap((img) => {
+    try { return [urlFor(img).width(1200).height(800).url()] } catch { return [] }
+  })
 
   const whatsappUrl = siteConfig.social.whatsapp
 
