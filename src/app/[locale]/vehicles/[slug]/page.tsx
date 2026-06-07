@@ -134,7 +134,7 @@ export default async function VehicleDetailPage(props: { params: Promise<{ local
               <div className="mt-5">
                 <span className="text-[13px] text-muted-foreground uppercase tracking-wider">{t('prix')}</span>
                 <p className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-                  {vehicle.price.toLocaleString()} <span className="text-lg font-normal text-muted-foreground">{t('fcfa')}</span>
+                  {vehicle.price?.toLocaleString() ?? '—'} <span className="text-lg font-normal text-muted-foreground">{t('fcfa')}</span>
                 </p>
               </div>
 
@@ -142,7 +142,7 @@ export default async function VehicleDetailPage(props: { params: Promise<{ local
                 <div className="rounded-xl border border-border/50 bg-card p-4 text-center">
                   <Calendar className="h-5 w-5 text-electric mx-auto" />
                   <p className="mt-2 text-xs text-muted-foreground">{t('annee')}</p>
-                  <p className="font-heading text-sm font-semibold">{vehicle.year}</p>
+                  <p className="font-heading text-sm font-semibold">{vehicle.year ?? '—'}</p>
                 </div>
                 <div className="rounded-xl border border-border/50 bg-card p-4 text-center">
                   <Gauge className="h-5 w-5 text-electric mx-auto" />

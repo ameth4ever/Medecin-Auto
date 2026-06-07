@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { getLocale } from 'next-intl/server'
 import { manrope, clashDisplay } from '@/lib/fonts'
 import { generatePageMetadata } from '@/lib/seo'
 import './globals.css'
@@ -20,16 +19,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const locale = await getLocale()
-
   return (
     <html
-      lang={locale}
+      lang="fr"
       className={`${manrope.variable} ${clashDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">

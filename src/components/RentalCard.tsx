@@ -101,7 +101,7 @@ export function RentalCard({ rental }: RentalCardProps) {
           {/* Vehicle specs */}
           {rental.vehicle && (
             <div className="mt-4 grid grid-cols-3 gap-3 rounded-xl bg-muted/50 p-3">
-              {rental.vehicle.mileage !== undefined && (
+              {rental.vehicle.mileage != null && (
                 <div className="flex flex-col items-center gap-1">
                   <Gauge className="h-3.5 w-3.5 text-electric" />
                   <span className="text-[11px] text-muted-foreground font-medium">

@@ -92,7 +92,7 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
 
           {/* Specs */}
           <div className="mt-4 grid grid-cols-3 gap-3 rounded-xl bg-muted/50 p-3">
-            {vehicle.mileage !== undefined && (
+            {vehicle.mileage != null && (
               <div className="flex flex-col items-center gap-1">
                 <Gauge className="h-3.5 w-3.5 text-electric" />
                 <span className="text-[11px] text-muted-foreground font-medium">
@@ -119,7 +119,7 @@ export function VehicleCard({ vehicle }: VehicleCardProps) {
             <div>
               <span className="text-[11px] text-muted-foreground uppercase tracking-wider">{t('prix')}</span>
               <p className="font-heading text-xl font-bold text-foreground">
-                {vehicle.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">{t('fcfa')}</span>
+                {vehicle.price?.toLocaleString() ?? '—'} <span className="text-sm font-normal text-muted-foreground">{t('fcfa')}</span>
               </p>
             </div>
             <motion.span

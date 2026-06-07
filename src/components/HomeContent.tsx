@@ -772,9 +772,9 @@ export function HomeContent({
               </MotionWrapper>
             </div>
             <MotionWrapper variant="stagger" className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {featuredRentals.map((rental) => (
+              {featuredRentals.filter((r) => r.vehicle).map((rental) => (
                 <MotionItem key={rental._id} direction="up">
-                  <VehicleCard vehicle={rental.vehicle} />
+                  <VehicleCard vehicle={rental.vehicle!} />
                 </MotionItem>
               ))}
             </MotionWrapper>

@@ -74,27 +74,27 @@ export interface Vehicle {
   _type: 'vehicle'
   title: string
   slug: string
-  brand: string
-  model: string
-  year: number
+  brand?: string
+  model?: string
+  year?: number
   price: number
-  currency: string
-  mileage: number
-  transmission: Transmission
-  fuelType: FuelType
-  condition: VehicleCondition
-  status: VehicleStatus
-  description: string
-  shortDescription: string
-  images: SanityImage[]
-  features: string[]
-  isFeatured: boolean
-  isForSale: boolean
-  isForRent: boolean
+  currency?: string
+  mileage?: number
+  transmission?: Transmission
+  fuelType?: FuelType
+  condition?: VehicleCondition
+  status?: VehicleStatus
+  description?: string
+  shortDescription?: string
+  images?: SanityImage[]
+  features?: string[]
+  isFeatured?: boolean
+  isForSale?: boolean
+  isForRent?: boolean
   dailyRate?: number
   weeklyRate?: number
   monthlyRate?: number
-  seo: SeoMetadata
+  seo?: SeoMetadata
 }
 
 export type RentalDuration = 'daily' | 'weekly' | 'monthly' | 'longterm'
@@ -105,19 +105,19 @@ export interface Rental {
   _type: 'rental'
   title: string
   slug: string
-  vehicle: Vehicle
-  dailyRate: number
-  weeklyRate: number
-  monthlyRate: number
-  deposit: number
-  mileageLimit: number
-  insurance: string
-  availability: RentalStatus
-  isFeatured: boolean
-  images: SanityImage[]
-  features: string[]
-  conditions: string[]
-  seo: SeoMetadata
+  vehicle?: Vehicle
+  dailyRate?: number
+  weeklyRate?: number
+  monthlyRate?: number
+  deposit?: number
+  mileageLimit?: number
+  insurance?: string
+  availability?: RentalStatus
+  isFeatured?: boolean
+  images?: SanityImage[]
+  features?: string[]
+  conditions?: string[]
+  seo?: SeoMetadata
 }
 
 export interface BlogCategory {
