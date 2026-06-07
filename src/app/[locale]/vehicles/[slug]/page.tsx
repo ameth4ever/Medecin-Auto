@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await props.params
-  const vehicle = await client.fetch<Vehicle>(vehicleBySlugQuery, { slug })
+  const vehicle = await client.fetch<Vehicle>(vehicleBySlugQuery, { slug }).catch(() => null)
   if (!vehicle) return {}
   return generatePageMetadata(vehicle.seo, locale)
 }
@@ -34,7 +34,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 export default async function VehicleDetailPage(props: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await props.params
   const t = await getTranslations({ locale, namespace: 'vehicles' })
-  const vehicle = await client.fetch<Vehicle>(vehicleBySlugQuery, { slug })
+  const vehicle = await client.fetch<Vehicle>(vehicleBySlugQuery, { slug }).catch(() => null)
 
   if (!vehicle) notFound()
 

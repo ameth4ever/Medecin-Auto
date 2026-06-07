@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await props.params
-  const rental = await client.fetch<Rental>(rentalBySlugQuery, { slug })
+  const rental = await client.fetch<Rental>(rentalBySlugQuery, { slug }).catch(() => null)
   if (!rental) return {}
   return generatePageMetadata(rental.seo, locale)
 }
@@ -33,7 +33,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 export default async function RentalDetailPage(props: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await props.params
   const t = await getTranslations({ locale, namespace: 'rentals' })
-  const rental = await client.fetch<Rental>(rentalBySlugQuery, { slug })
+  const rental = await client.fetch<Rental>(rentalBySlugQuery, { slug }).catch(() => null)
 
   if (!rental) notFound()
 

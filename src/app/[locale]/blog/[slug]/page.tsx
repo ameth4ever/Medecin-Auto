@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await props.params
-  const post = await client.fetch<BlogPost>(blogPostBySlugQuery, { slug })
+  const post = await client.fetch<BlogPost>(blogPostBySlugQuery, { slug }).catch(() => null)
   if (!post) return {}
   return generatePageMetadata(post.seo, locale)
 }
@@ -28,7 +28,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 export default async function BlogPostPage(props: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await props.params
   const t = await getTranslations({ locale, namespace: 'blog' })
-  const post = await client.fetch<BlogPost>(blogPostBySlugQuery, { slug })
+  const post = await client.fetch<BlogPost>(blogPostBySlugQuery, { slug }).catch(() => null)
 
   if (!post) notFound()
 
