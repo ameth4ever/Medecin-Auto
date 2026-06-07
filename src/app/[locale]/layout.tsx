@@ -1,6 +1,8 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import Script from 'next/script'
+
+export const dynamic = 'force-dynamic'
 import { generatePageMetadata, generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo'
 import { siteConfig } from '@/config/site'
 import { Header } from '@/components/Header'
